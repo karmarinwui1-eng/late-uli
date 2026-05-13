@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #222;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    z-index: 1000;
+}
+
+.logo-img {
+    width: 100px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgb(141, 78, 141);
+    font-weight: bold;
+}
+
+header {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#one {
+    z-index: 1;
+}
+
+#third {
+    z-index: 2;
+}
+
+#two {
+    z-index: 3;
+}
+
+.section {
+    padding: 100px 10%;
+}
+
+.about-box {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.text h2 {
+    font-size: 50px;
+}
+
+.text h3 {
+    font-size: 30px;
+    color: pink;
+}
+
+.img-box img {
+    width: 300px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img,
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.demo-card {
+    width: 800px;
+    text-align: center;
+}
+
+.demo-card video {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: pink;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .demo-card {
+        width: 90%;
+    }
+    .demo-card video {
+        height: auto;
+    }
+}
+
+.devs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.dev {
+    width: 200px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.dev img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+    transition: 0.4s;
+}
+
+.dev:hover .overlay {
+    bottom: 0;
+}
+
+.overlay a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: pink;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .about-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.footer {
+    background: #111;
+    color: white;
+    padding: 40px 10%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-left h2 {
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.footer-links a:hover {
+    color: pink;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-socials a {
+    text-decoration: none;
+    color: #ccc;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-socials img {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-socials a:hover {
+    color: pink;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .footer-socials a {
+        justify-content: center;
+    }
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
